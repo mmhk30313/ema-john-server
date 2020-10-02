@@ -39,7 +39,7 @@ client.connect(err => {
         // productsCollection.insertMany(products)
         productsCollection.insertOne(products)
         .then(result => {
-            // console.log(result);
+            console.log(result);
             res.send(result);
         })
 
