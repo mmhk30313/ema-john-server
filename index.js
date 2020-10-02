@@ -19,9 +19,9 @@ app.use(cors());
 
 const port = 3001
 
-// app.get('/', (req, res) => {
-//     res.send('Hello Ema-John!')
-// })
+app.get('/', (req, res) => {
+    res.send("Hello Ema-John-MongoDB! It's Working After Deploying Heroku...")
+})
 
 //It's from (monogodb.com/Clusters/CONNECT) by searching in google
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
