@@ -55,7 +55,8 @@ client.connect(err => {
     
     // Read Data..from -> localhost:3001/products...
     app.get('/products', (req, res) =>{
-        productsCollection.find({})
+        const search = req.query.search;
+        productsCollection.find({name: {$regex: search}})
         .toArray( (err, documents) => {
             res.send(documents);
         })
